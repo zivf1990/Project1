@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/form.css" />
+  </head>
+  <body>
+    <section class="form-container">
+      <form action="" method="GET">
+        <div class="row">
+          <div class="col-25"><label for="fname">First Name</label></div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              minlength="2"
+              maxlength="15"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="lname">Last Name</label></div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="phone">Phone </label></div>
+          <div class="col-75">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="email">Email</label></div>
+          <div class="col-75">
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="">Room</label></div>
+          <div class="col-75">
+            <label for="small-room"
+              ><input
+                type="radio"
+                id="small-room"
+                name="rooms"
+                value="small-room"
+                checked
+              />
+              Small Room</label
+            >
+
+            <label for="medium-room"
+              ><input
+                type="radio"
+                id="medium-room"
+                name="rooms"
+                value="medium-room"
+              />
+              Medium Room</label
+            >
+
+            <label for="huge-room"
+              ><input
+                type="radio"
+                id="huge-room"
+                name="rooms"
+                value="huge-room"
+              />
+              Huge Room</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="">Time of arrival</label></div>
+          <div class="col-75">
+            <label for="hour12"
+              ><input
+                checked
+                type="checkbox"
+                id="hour12"
+                name=""
+                value="12:00"
+              />
+              12:00</label
+            >
+
+            <label for="hour13"
+              ><input type="checkbox" id="hour13" name="" value="13:00" />
+              13:00</label
+            >
+
+            <label for="hour14"
+              ><input type="checkbox" id="hour14" name="" value="14:00" />
+              14:00</label
+            >
+
+            <label for="hour15"
+              ><input type="checkbox" id="hour15" name="" value="15:00" />
+              15:00</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="">Vacation extras</label></div>
+          <div class="col-75">
+            <label for="renting-car"
+              ><input
+                type="checkbox"
+                id="renting-car"
+                name="renting-car"
+                value="renting-car"
+              />
+              Rent a car</label
+            >
+
+            <label for="breakfast"
+              ><input
+                type="checkbox"
+                id="breakfast"
+                name="rbreakfast"
+                value="rbreakfast"
+              />
+              Breakfast</label
+            >
+
+            <label for="dinner"
+              ><input
+                type="checkbox"
+                id="dinner"
+                name="dinner"
+                value="dinner"
+              />
+              Dinner</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="special-requests">Special requests</label>
+          </div>
+          <div class="col-75">
+            <textarea
+              name="special-requests"
+              id="special-requests"
+              cols="50"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="">Credit Card</label></div>
+          <div class="col-75">
+            <select name="credit-card-type" id="credit-card-type">
+              <option value="visa">visa</option>
+              <option value="american express">american express</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="card-owner-fname">Card's owner fullname</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="card-owner-fname"
+              name="ccard-owner-fname"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="card-id">Card's owner id</label></div>
+          <div class="col-75">
+            <input
+              type="text"
+              name="card-id"
+              id="card-id"
+              pattern="[0-9]{9,}"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="card-number">Card Number</label></div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              pattern="[0-9]{16}"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="ed">Card expiration date</label></div>
+          <div class="col-75">
+            <input type="date" min="2022-10-20" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25"><label for="cvv">cvv</label></div>
+          <div class="col-75">
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              pattern="[0-9]{3}"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

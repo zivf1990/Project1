@@ -1,0 +1,177 @@
+:root {
+  /* colors */
+  --main: #001524;
+  --logo: #34b9d3;
+  --navbar: #f6bd60;
+  --aside: #d4e09b;
+  --color7: #ffffff;
+  --section1: #fdf0d5;
+  --section2: #ee6c4d;
+  --section3: #a6808c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Super Parents Divs */
+html {
+  font-size: 10px;
+  font-weight: bold;
+
+  min-height: 100%; /* Look, it's not fixed anymore! */
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+body {
+  flex-grow: 1;
+  background: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 8vh 8vh 180vh 80vh 30vh 90vh;
+  grid-template-areas:
+    "a a a a a a a a a a"
+    "b b c c c c c c c c"
+    "e e e e e e e e e d"
+    "g g g g g g g g g g"
+    "f f f f f f f f f f"
+    "h h h h h h h h h h";
+}
+
+header {
+  background: var(--main);
+  color: var(--color7);
+  grid-area: a;
+}
+
+aside {
+  background-color: var(--aside);
+  grid-area: d;
+}
+
+main {
+  background-color: var(--section1);
+  grid-area: e;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+footer {
+  background-color: var(--logo);
+  grid-area: h;
+}
+
+section {
+  border: 3px solid black;
+}
+
+nav {
+  background-color: var(--navbar);
+  grid-area: c;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+  font-size: 3rem;
+}
+
+nav li {
+  /* border-left: 1px solid black; */
+  /* border-right: 1px solid black; */
+
+  padding: 1rem 3rem;
+}
+
+nav li:first-child {
+  /* border-left: 2px solid black; */
+}
+
+nav li:last-child {
+  /* border-right: 2px solid black; */
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+nav li:hover {
+
+}
+
+#logo {
+  background-color: var(--logo);
+  grid-area: b;
+}
+
+#licence {
+  background-color: var(--color6);
+  grid-area: f;
+}
+
+#comments {
+  grid-area: g;
+  background-color: var(--color7);
+}
+
+#section1 {
+  background: var(--section1);
+}
+
+#section2 {
+  background: var(--section2);
+}
+
+#section3 {
+  background: var(--section3);
+}
+
+.center {
+  /* center flex */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  /* center grid */
+  display: grid;
+  place-items: center;
+}
+
+/* Animations */
+.scale {
+  animation: scale 1.5s both;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/* Responasive */
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-rows: 8vh 6vh 140vh 60vh 60vh 60vh;
+    grid-template-areas:
+      "a a a a a a a a a a"
+      "b b c c c c c c c c"
+      "e e e e e e e d d d"
+      "f f f f f f f f f f"
+      "g g g g g g g g g g"
+      "h h h h h h h h h h";
+  }
+}
